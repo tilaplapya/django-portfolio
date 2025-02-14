@@ -1,0 +1,99 @@
+{% load static %}
+
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="{% static 'style.css' %}" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<title>Portfolio</title> 
+</head> 
+<body> 
+
+    <nav>
+        <ul>
+            <li><a href="#profile-section">Skills</a></li>
+            <li><a href="#projects-section">Project</a></li>
+            <li><a href="#contacts-section">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-page">
+        <h1>My Simple Portfolio</h1>
+        <h2>My Simple Portfolio</h2>
+        <!-- <h3>explore my portfolio!</h3> -->
+        <a href="#profile-section" class="wooden-link">EXPLORE</a>
+    </div>
+<!-- <img src="{% static 'turtle_bg.jpg' %}" /> -->
+
+    <section class="profile-section" id="profile-section">
+        <div class="profile">
+            <img src="{% static 'profile_pic.jpg' %}" />
+        </div>
+        <div class="profile-desc">
+            <p>Hi! I'm Vinz Reibhen Ilagan</p>
+            <h4>A BSIT student from Gordon College</h4>
+            <h4>who is passionate about web development</h4>
+        </div>
+        <div class="dev-skill">
+            <h3>My Skills</h3>
+            <ul>
+                <li> <i class='bx bxl-html5 bx-tada' style="color: rgb(255, 123, 0);"></i> HTML</li>
+                <li> <i class='bx bxl-css3 bx-tada' style="color: #1d84fa;" ></i> CSS</li>
+                <li> <i class='bx bxl-javascript bx-tada' style="color: rgb(170, 255, 0);" ></i> JavaScript</li>
+                <li> <i class='bx bxl-python bx-tada' style='color:#04b4e9' ></i> Python</li>
+                <li> <i class='bx bxl-django bx-tada' style='color:#336329'  ></i> Django</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="project-section" id="projects-section">
+        <h3>My Project</h3>
+        <div class="project">
+            <div class="project-img">
+                <img src="{% static 'gc_proco1.png' %}" class="gc_proco1" />
+                <img src="{% static 'gc_proco2.png' %}" class="gc_proco2"/>
+            </div>
+            <h4>GC ProCo</h4>
+            <p>I am currently working on a project and task management web-app for BSIT students of Gordon College</p>
+        </div>
+
+    </section>
+
+    <section class="contact-section" id="contacts-section">
+        <h3>Contact Me</h3>
+        <p class="contact-description">Feel free to reach out via email, phone, or social media. I look forward to hearing from you!</p>
+        <div class="contact">
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <h4>Email</h4>
+                <p>vinzreibhen@gmail.com</p>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-phone-alt"></i>
+                <h4>Phone</h4>
+                <p>09183061804</p>
+            </div>
+            <div class="contact-info">
+                <i class="fab fa-facebook"></i>
+                <h4>Social Media</h4>
+                <p>Facebook: Vinz Ilagan</p>
+                <p>Instagram: @tilaplapya</p>
+            </div>
+        </div>
+        <form class="contact-form">
+            <h4>Send a Message</h4>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="map">
+            <h4>Find Me Here!</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7721.309689139934!2d120.28287204323693!3d14.831717702991248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339671bfbd44a7b7%3A0x52e5f5bb9f1b63b4!2sOlongapo%20City%2C%20Zambales%2C%20Philippines!5e0!3m2!1sen!2sph!4v1708000000000!5m2!1sen!2sph" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+</body> 
+</html> 
