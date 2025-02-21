@@ -1,0 +1,219 @@
+/* -------------------------- */
+/*        General Styles      */
+/* -------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* -------------------------- */
+/*          Sidebar           */
+/* -------------------------- */
+
+.sidebar {
+    background: linear-gradient(180deg, #A67B5B 0%, #8B4513 100%);
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+/* Sidebar Scrollbar Customization */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.sidebar-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* -------------------------- */
+/*         Sidebar Links      */
+/* -------------------------- */
+
+.list-group-item {
+    border: none;
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: transparent;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.list-group-item i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.list-group-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(10px);
+    border-radius: 10px;
+}
+
+.list-group-item:hover i {
+    transform: rotate(8deg);
+}
+
+/* -------------------------- */
+/*          Navbar            */
+/* -------------------------- */
+
+.navbar {
+    background: linear-gradient(to right, #D2B48C, #A67B5B);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar Branding */
+.navbar h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Navbar Hover Effect */
+.navbar .nav-link:hover {
+    color: #512E1D;
+    transform: scale(1.1);
+}
+
+/* Navbar Toggle Icon */
+#menu-toggle {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    font-size: 1.5rem;
+}
+
+#menu-toggle:hover {
+    transform: rotate(90deg);
+}
+
+/* -------------------------- */
+/*     Page Content Wrapper   */
+/* -------------------------- */
+
+#page-content-wrapper {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+    padding: 2rem;
+}
+
+/* Card Design */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* -------------------------- */
+/*         Buttons            */
+/* -------------------------- */
+
+.btn-primary {
+    background-color: #8B4513;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #5A2E10;
+    transform: scale(1.05);
+}
+
+/* -------------------------- */
+/*         Animations         */
+/* -------------------------- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* -------------------------- */
+/*         Responsive         */
+/* -------------------------- */
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    #page-content-wrapper {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .navbar h2 {
+        font-size: 1.4rem;
+    }
+
+    .list-group-item {
+        padding: 0.8rem 1.5rem;
+    }
+}

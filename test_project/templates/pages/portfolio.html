@@ -17,6 +17,7 @@
             <li><a href="#profile-section">Skills</a></li>
             <li><a href="#projects-section">Project</a></li>
             <li><a href="#contacts-section">Contact</a></li>
+            <li><a href="{% url 'portfolio:dashboard' %}">Dashboard</a></li>
         </ul>
     </nav>
 
@@ -34,8 +35,7 @@
         </div>
         <div class="profile-desc">
             <p>Hi! I'm Vinz Reibhen Ilagan</p>
-            <h4>A BSIT student from Gordon College</h4>
-            <h4>who is passionate about web development</h4>
+            <h4>A BSIT student from Gordon College, who is passionate about web development</h4>
         </div>
         <div class="dev-skill">
             <h3>My Skills</h3>
@@ -53,8 +53,14 @@
         <h3>My Project</h3>
         <div class="project">
             <div class="project-img">
-                <img src="{% static 'gc_proco1.png' %}" class="gc_proco1" />
-                <img src="{% static 'gc_proco2.png' %}" class="gc_proco2"/>
+                <div class="select1">
+                    <img src="{% static 'gc_proco1.png' %}" class="gc_proco1" />
+                </div>
+
+                <div class="select2">
+                    <img src="{% static 'gc_proco2.png' %}" class="gc_proco2"/>
+                </div>
+                
             </div>
             <h4>GC ProCo</h4>
             <p>I am currently working on a project and task management web-app for BSIT students of Gordon College</p>
@@ -96,4 +102,6 @@
         </div>
     </section>
 </body> 
+
+
 </html> 

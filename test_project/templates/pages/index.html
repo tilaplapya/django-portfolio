@@ -10,16 +10,14 @@
 <title>Portfolio</title> 
 </head> 
 <body> 
-<h1>this is index</h1>
-    <nav>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="{% url 'portfolio:portfolio' %}">Portfolio</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-    </nav>
 <!-- <img src="{% static 'turtle_bg.jpg' %}" /> -->
+<div class="main-page">
+    <h1>My Simple Portfolio</h1>
+    <h2>My Simple Portfolio</h2>
+    <!-- <h3>explore my portfolio!</h3> -->
+    <a href="{% url 'portfolio:portfolio'%}" class="wooden-link">Portfolio</a>
+    <a href="{% url 'portfolio:dashboard'%}" class="wooden-link">Dashboard</a>
+</div>
 
 </body> 
 </html> 
