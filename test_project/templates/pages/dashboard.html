@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load stat %}
+{% load static %}
 
 {% block title %}
     Dashboard
@@ -17,6 +18,9 @@
     </div>
   </div>
   
+  <div class="try_image">
+    <img src="{%static 'profile_pic.jpg'%}" alt="">
+  </div>
 
  
 {% endblock %}

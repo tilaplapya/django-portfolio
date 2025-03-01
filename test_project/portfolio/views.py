@@ -14,3 +14,4 @@ def dashboard(request):
         {"title": "Revenue", "count": "12450"},
     ]
     return render(request, "pages/dashboard.html", context={"data": data})
+
