@@ -22,9 +22,10 @@ urlpatterns = [
     path('', include('portfolio.urls', namespace="portfolio")),
     path('api/', include([
         path('users/', include('users.urls', namespace='users')),
-    ])
-        
-    ),
+    ])),
+    path('api/', include([
+        path('items/', include('items.urls', namespace='items')),
+    ])),
 ]
 
 

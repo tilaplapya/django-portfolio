@@ -15,10 +15,11 @@ def index(request):
 @require_POST
 @csrf_exempt
 
-def create_user(request):
-    payload = request.POST
+def create_user(request, id):
+    payload = request.GET
     data = {
-        "name": payload.get("name")
+        "id": id,
+        "context": payload,
     }
     return JsonResponse({"message": "success", "payload": data}, status=200)
 
@@ -29,6 +30,6 @@ def get_users(request, id):
 
     data = {
         "id": id,
-        "context": payload
+        "context": payload,
     }
-    return JsonResponse({"message": "success", "payload": {"id": id}}, status=200)
+    return JsonResponse({"message": "success", "payload": data}, status=200)
