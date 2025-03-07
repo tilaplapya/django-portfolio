@@ -3,21 +3,18 @@ from . import views
 
 app_name = "items"
 urlpatterns = [
-    # return all items
-    path('', views.index, name='index'), 
-
-    # filter items using a query parameter
-    path('<str:name>', views.get_itemsparam, name='index'),
-
-    # add item
-    path('add/<str:id>', views.add_item, name='index'),
-
-    # get item
-    path('<int:id>/', views.get_items, name='index'),
-
-    # update item
-    path('update/<int:id>/', views.update_item, name='index'),
-
-    # delete item
-    path('delete/<int:id>/', views.delete_item, name='index'),
+    # Return all items
+    path('', views.index, name='get_all_items'),
+    
+    # Get a single item
+    path('<int:item_id>/', views.get_item, name='get_item'),
+    
+    # Add a new item
+    path('add/', views.add_item, name='add_item'),
+    
+    # Update an item
+    path('update/<int:item_id>/', views.update_item, name='update_item'),
+    
+    # Delete an item
+    path('delete/<int:item_id>/', views.delete_item, name='delete_item'),
 ]
